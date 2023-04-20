@@ -4,41 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
   <title>Jordan White - Portfolio</title>
 </head>
 <body>
   <header>
-    <h1>Jordan White</h1>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
   </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Your Name, a computer science and machine learning enthusiast. I'm passionate about developing innovative solutions to complex problems using cutting-edge technology.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <h3>Project 1</h3>
-        <p>A brief description of Project 1, including its purpose, technologies used, and any relevant links to the source code or live demo.</p>
-      </li>
-      <li>
-        <h3>Project 2</h3>
-        <p>A brief description of Project 2, including its purpose, technologies used, and any relevant links to the source code or live demo.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Feel free to get in touch with me via email at <a href="mailto:your.email@example.com">your.email@example.com</a>, or connect with me on <a href="https://www.linkedin.com/in/yourusername/" target="_blank">LinkedIn</a>.</p>
-  </section>
-  <script src="script.js"></script>
+  <main>
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <p>I'm Jordan White, a computer science and machine learning enthusiast.</p>
+      <section id="my-photo">
+        <div class="photo-container">
+          <img src="me.jpeg" alt="Jordan White" class="profile-photo">
+        </div>
+      </section>      
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div id="repo-list"></div>
+    </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm Jordan White, a passionate computer science and machine learning student and enthusiast based in Seattle, Washington. I am currently pursuing my undergraduate degree in Electrical and Computer Engineering from the University of Washington and have developed a strong interest in the fields of artificial intelligence, data science, and software development.
+      </p>
+      <p>
+        My journey into the world of programming started with learning Java during my freshman year. Since then, I have expanded my skill set by learning various programming languages and technologies, including Python, JavaScript, and C as well as technologies such as TensorFlow, React, PyTorch, Pandas, and NumPy.
+      </p>
+      <p>
+        Throughout my academic journey, I have worked on several projects, ranging from web applications to machine learning models. I enjoy the challenge of solving complex problems and am constantly seeking opportunities to apply my skills and knowledge to real-world scenarios. My ultimate goal is to contribute to the development of innovative solutions that can make a positive impact on society.
+      </p>
+      <p>
+        When I'm not coding or studying, I enjoy hiking, playing the guitar, or finding a new coffee shop to go to. I believe that a well-balanced lifestyle helps me stay focused and motivated, allowing me to be more effective in my work.
+      </p>
+      <p>
+        If you'd like to get in touch or learn more about my work, please don't hesitate to reach out via the contact information provided below. I'm always open to new opportunities and collaborations.
+      </p>
+    </section>
+    
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: jwhite34@uw.edu</p>
+      <p>LinkedIn: https://www.linkedin.com/in/jordan-white-page/</p>
+      <p>GitHub: https://github.com/JordanWhite34</p>
+    </section>
+  </main>
 </body>
 </html>
