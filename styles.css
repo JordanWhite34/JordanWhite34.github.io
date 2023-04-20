@@ -59,3 +59,24 @@ p {
 section {
   margin-bottom: 2rem;
 }
+
+/* Repository box styles */
+.repo {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Collapsible header styles */
+.collapsible-header {
+  cursor: pointer;
+}
+
+.collapsible-content {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+

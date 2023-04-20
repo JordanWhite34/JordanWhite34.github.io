@@ -54,3 +54,18 @@ function displayRepos(repos) {
 
 // Call the fetchGitHubRepos function when the page loads
 document.addEventListener('DOMContentLoaded', fetchGitHubRepos);
+
+// collapsable header
+function toggleCollapsible(event) {
+  event.target.classList.toggle("active");
+  const content = event.target.nextElementSibling;
+
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+}
+
+// Add click event listener to the collapsible header
+document.querySelector(".collapsible-header").addEventListener("click", toggleCollapsible);
