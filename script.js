@@ -18,7 +18,7 @@ const githubUsername = 'JordanWhite34';
 // Fetch public repositories from GitHub
 async function fetchGitHubRepos() {
   try {
-    const response = await fetch(`https://api.github.com/users/${JordanWhite34}/repos`);
+    const response = await fetch(`https://api.github.com/users/${githubUsername}/repos`);
     const repos = await response.json();
     displayRepos(repos);
   } catch (error) {
