@@ -1,3 +1,3 @@
-# html-freebie-portfolio-perfect
+# html-portfolio
 
 This is my website! Enjoy.
