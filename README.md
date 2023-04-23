@@ -1,1 +1,3 @@
-# JordanWhite34.github.io
+# html-freebie-portfolio-perfect
+
+This is my website! Enjoy.
