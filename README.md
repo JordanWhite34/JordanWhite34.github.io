@@ -1,3 +1,3 @@
-# JordanWhite34.github.io
+# html-portfolio
 
-This is my portfolio website, access it here -> https://jordanwhite34.github.io/
+This is my website! Enjoy.
