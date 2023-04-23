@@ -284,12 +284,12 @@
             </div>
         </section><!-- /.section-counters -->
 
-        <form id="contact" class="site-section section-form text-center" action="assets/php/send_email.php">
+        <section id="contact" class="site-section section-form text-center">
             <div class="container">
                 <h3>Contact</h3>
                 <img src="assets/img/lines.svg" class="img-lines" alt="lines">
                 <p>Email: jwhite34@uw.edu</p>
-                <form>
+                <form action="assets/php/send_email.php" method="post">
                     <div class="row">
                         <div class="col-sm-6">
                             <input type="text" name="name" class="form-control mt-x-0" placeholder="Name" required>
@@ -303,7 +303,7 @@
                     </div>
                     <input class="btn btn-border" type="submit" value="Contact Me">
                 </form>
-            </form>
+            </div>
         </section><!-- /.section-form -->
 
     </main><!-- /#main -->
