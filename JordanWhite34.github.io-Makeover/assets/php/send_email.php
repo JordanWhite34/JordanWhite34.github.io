@@ -1,4 +1,9 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = strip_tags(trim($_POST["name"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
@@ -10,20 +15,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $recipient = "jwhite34@uw.edu";
-    $subject = "New message from $name";
-    $email_content = "Name: $name\n";
-    $email_content .= "Email: $email\n\n";
-    $email_content .= "Message:\n$message\n";
+    $mail = new PHPMailer(true);
 
-    $email_headers = "From: $name <$email>";
+    try {
+        //Server settings
+        $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'user@example.com';                 // SMTP username
+        $mail->Password = 'secret';                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
 
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
-        http_response_code(200);
-        echo "Thank you! Your message has been sent.";
-    } else {
-        http_response_code(500);
-        echo "Oops! Something went wrong, and we couldn't send your message.";
+        //Recipients
+        $mail->setFrom($email, $name);
+        $mail->addAddress('jwhite34@uw.edu', 'Joe User');     // Add a recipient
+
+        //Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = "New message from $name";
+        $mail->Body    = "Name: $name\n Email: $email\n\n Message:\n$message\n";
+
+        $mail->send();
+        echo 'Message has been sent';
+    } catch (Exception $e) {
+        echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
     }
 } else {
     http_response_code(403);
